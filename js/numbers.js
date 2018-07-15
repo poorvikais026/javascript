@@ -60,6 +60,56 @@ function fibonaci()
     }
     showResult("fibonaci of "+num+" is "+output);
 }
+function reverse(){
+    var num=getUserInput();
+    var rev=0;
+    while(num!=0){
+       r=num%10;
+       rev=rev*10+r;
+       num=Math.floor(num/10);
+   } 
+    showResult("reverse of number is"+rev);
+}
+function pallindrome(){
+  var num=getUserInput();
+    var num2=num;
+    var rev=0;
+    while(num!=0){
+       r=num%10;
+       rev=rev*10+r;
+       num=Math.floor(num/10);  
+}
+    if(num2==rev){
+        showResult("pallindrome");
+    }else{
+        showResult("not a pallindrome");
+    }
+}
+function sumofdigits(){
+  var num=getUserInput();  
+var sum=0;
+    while(num!=0)
+        {
+            sum +=num%10;
+            num=Math.floor(num/10);
+        }
+    showResult("sum of digits is"+sum);
+}
+function sumofsingledigits(){
+     var num=getUserInput();  
+    var num2;
+    sum=num2;
+    while(num>9){
+        sum=Math.floor(num/10)+num%10;
+        num=sum;
+    }
+    showResult("sumofsingledigits is"+sum);
+}
+
+
+
+
+
 function getUserInput(){
     num=document.getElementById("num").value;
     return num;
